@@ -6,13 +6,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 :root {
-  @include mat.slide-toggle-overrides((
-    track-outline-color: orange,
-    disabled-unselected-track-outline-color: red,
-    selected-track-color: green,
-    unselected-thumb-color: blue,
-    selected-thumb-color: black,
-    thumb-shape: 24px, // Can customize thumb size here too
-  ));
-}
-
+    @include mat.slide-toggle-overrides((
+      track-outline-color: orange,
+      disabled-unselected-track-outline-color: red,
+    ));
+  }
