@@ -12,8 +12,7 @@ export class AppComponent {
   title = 'multipleLoginOptionsIntegration-webapp';
     //@ViewChild('toggle') toggle!: MatSlideToggle;
 
-    toggleState(toggle:MatSlideToggle){
-    const stateOfButton = toggle.toggle() 
+    toggleState(toggle: boolean){
         alert(toggle)
     }
 
