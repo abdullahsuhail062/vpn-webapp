@@ -5,8 +5,7 @@
     align-items: center;
 }
  
-mat-slide-toggle {
-    background-color: greenyellow;
-    color: black !important;
+::ng-deep .mat-slide-toggle-content {
+    font: var(--mat-sys-body-medium-font);
   }
   
