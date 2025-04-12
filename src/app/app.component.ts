@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MatSlideToggle, MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSlideToggle, MatSlideToggleChange, MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NgIf } from '@angular/common';
 import { interval } from 'rxjs';
 
@@ -13,8 +13,11 @@ import { interval } from 'rxjs';
 export class AppComponent {
   title = 'multipleLoginOptionsIntegration-webapp';
     //@ViewChild('toggle') toggle!: MatSlideToggle;
-toggleState(toggle: MatSlideToggle){
-  toggle.toggle()
+toggleState(event: MatSlideToggleChange){
+if (event.checked ===true) {
+  alert('button toggled to positive state')
+  
+}
 }
 
 
