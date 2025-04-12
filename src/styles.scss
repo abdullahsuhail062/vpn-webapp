@@ -3,6 +3,16 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-mat-slide-toggle {
-    color:black;
+@use '@angular/material' as mat;
+
+:root {
+  @include mat.slide-toggle-overrides((
+    track-outline-color: orange,
+    disabled-unselected-track-outline-color: red,
+    selected-track-color: green,
+    unselected-thumb-color: blue,
+    selected-thumb-color: black,
+    thumb-shape: 24px, // Can customize thumb size here too
+  ));
 }
+
