@@ -12,14 +12,10 @@ export class AppComponent {
   title = 'multipleLoginOptionsIntegration-webapp';
     @ViewChild('toggle') toggle!: MatSlideToggle;
 
-  getFocus(){
-    const isToggled = this.toggle.checked
-    if (!isToggled) {
-      alert('Please toggle button before submitting')
-      this.toggle.focus()
-      
-    }else alert('form submitted!')
-  }
+    toggleState(){
+     const isToggled = this.toggle.toggle() 
+        alert(isToggled)
+    }
 
 
 }
