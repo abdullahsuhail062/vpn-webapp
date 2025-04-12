@@ -14,7 +14,7 @@ export class AppComponent {
 
     toggleState(toggle:MatSlideToggle){
     const stateOfButton = toggle.toggle() 
-        alert(stateOfButton)
+        alert(toggle)
     }
 
 
