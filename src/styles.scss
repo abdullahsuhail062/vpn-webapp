@@ -6,7 +6,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 
-:root {
+.mat-slide-toggle {
   @include mat.slide-toggle-overrides((
     track-outline-color: rgb(72, 255, 0),
     disabled-unselected-track-outline-color: rgb(255, 72, 0),
