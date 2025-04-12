@@ -5,7 +5,8 @@
     align-items: center;
 }
  
-mat-slide-toggle {
+::ng-deep mat-slide-toggle {
     padding: 20px;
     color: black;
-}
+  }
+  
