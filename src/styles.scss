@@ -10,7 +10,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
       track-outline-color: rgb(72, 255, 0),
       disabled-unselected-track-outline-color: rgb(255, 72, 0),
       label-text-color: black,
-      label-text-font: bold
+      label-text-font: --mat-sys-body-medium-font
       
     ));
   }
