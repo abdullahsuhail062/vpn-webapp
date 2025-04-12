@@ -10,11 +10,11 @@ import { MatSlideToggle, MatSlideToggleModule } from '@angular/material/slide-to
 })
 export class AppComponent {
   title = 'multipleLoginOptionsIntegration-webapp';
-    @ViewChild('toggle') toggle!: MatSlideToggle;
+    //@ViewChild('toggle') toggle!: MatSlideToggle;
 
-    toggleState(){
-     this.toggle.toggle() 
-        alert(this.toggle.toggle())
+    toggleState(toggle:MatSlideToggle){
+    const stateOfButton = toggle.toggle() 
+        alert(stateOfButton)
     }
 
 
