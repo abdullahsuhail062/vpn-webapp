@@ -14,7 +14,8 @@ export class AppComponent {
   title = 'multipleLoginOptionsIntegration-webapp';
     //@ViewChild('toggle') toggle!: MatSlideToggle;
 toggleState(event: MatSlideToggleChange){
-if (event.checked ===true) {
+   
+if (event.checked) {
   alert('button toggled to positive state')
   
 }
