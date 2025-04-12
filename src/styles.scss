@@ -5,9 +5,10 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
-.connect-goggle-button {
+:root {
     @include mat.slide-toggle-overrides((
       track-outline-color: orange,
       disabled-unselected-track-outline-color: red,
+      
     ));
   }
