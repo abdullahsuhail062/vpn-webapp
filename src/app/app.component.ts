@@ -13,8 +13,8 @@ export class AppComponent {
     @ViewChild('toggle') toggle!: MatSlideToggle;
 
     toggleState(){
-     const isToggled = this.toggle.toggle() 
-        alert(isToggled)
+     this.toggle.toggle() 
+        alert(this.toggle.toggle())
     }
 
 
