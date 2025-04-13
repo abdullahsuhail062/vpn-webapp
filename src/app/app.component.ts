@@ -14,6 +14,7 @@ export class AppComponent {
   title = 'multipleLoginOptionsIntegration-webapp';
   getConnected:boolean = true
   startConnecting: boolean =false
+  connected: boolean = false
   toggleState(event: MatSlideToggleChange){
    
 if (event.checked) {
@@ -24,10 +25,16 @@ if (event.checked) {
 if (!event.checked) {
   this.getConnected = true
   this.startConnecting = false
+  
 
   
 }
 }
 
+
+setConnectionState(){
+  this.getConnected = !this.getConnected
+  this.startConnecting = !this.startConnecting
+}
 
 }
