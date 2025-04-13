@@ -12,11 +12,13 @@ import { interval } from 'rxjs';
 })
 export class AppComponent {
   title = 'multipleLoginOptionsIntegration-webapp';
-  isToggled:boolean = false
-toggleState(event: MatSlideToggleChange){
+  getConnected:boolean = true
+  startConnecting: boolean =false
+  toggleState(event: MatSlideToggleChange){
    
 if (event.checked) {
-  this.isToggled = !this.isToggled
+  this.getConnected = false
+  this.startConnecting = true
   
 }
 }
