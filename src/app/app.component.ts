@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {  RouterOutlet } from '@angular/router';
 import { MatSlideToggle, MatSlideToggleChange, MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input'; // if using <input> inside
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // r
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,6 +21,7 @@ export class AppComponent {
   getConnected:boolean = true
   startConnecting: boolean =false
   connected: boolean = false
+  constructor(private router: Router){}
   toggleState(event: MatSlideToggleChange){
    
 if (event.checked) {
@@ -40,6 +42,10 @@ if (!event.checked) {
 setConnectionState(){
   this.getConnected = !this.getConnected
   this.startConnecting = !this.startConnecting
+}
+
+navigateToCountryList(){
+this.router.navigate(['/CountryListComponent'])
 }
 
 }
