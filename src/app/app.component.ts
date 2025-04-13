@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import {  RouterOutlet } from '@angular/router';
+import {  RouterLink, RouterOutlet } from '@angular/router';
 import { MatSlideToggle, MatSlideToggleChange, MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +13,7 @@ import { CountryListComponent } from './country-list/country-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,MatSlideToggleModule,NgIf,FormsModule,MatFormFieldModule,MatSelectModule,MatInputModule,CountryListComponent],
+  imports: [RouterLink,RouterOutlet,MatSlideToggleModule,NgIf,FormsModule,MatFormFieldModule,MatSelectModule,MatInputModule,CountryListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
