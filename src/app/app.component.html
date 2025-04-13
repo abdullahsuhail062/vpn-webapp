@@ -1,3 +1,5 @@
+<app-country-list></app-country-list>
+
 <div  class="connect-toggle-button">
   <mat-slide-toggle  class="mat-slide-toggle"  (change)="toggleState($event)" ><p *ngIf="getConnected">Toggle to get connected</p><p *ngIf="startConnecting"> Starting connect...</p><p *ngIf="connected">Connected</p></mat-slide-toggle>
 <button mat-button color="primary" (click)="navigateToCountryList()"><img src="images/earth.png" alt="" class="earth" width="30px" height="30px"> Connect smart</button></div>
