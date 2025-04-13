@@ -13,40 +13,11 @@ import { CountryListComponent } from './country-list/country-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterLink,RouterOutlet,MatSlideToggleModule,NgIf,FormsModule,MatFormFieldModule,MatSelectModule,MatInputModule,CountryListComponent],
+  imports: [RouterOutlet,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'multipleLoginOptionsIntegration-webapp';
-  getConnected:boolean = true
-  startConnecting: boolean =false
-  connected: boolean = false
-  constructor(private router: Router){}
-  toggleState(event: MatSlideToggleChange){
-   
-if (event.checked) {
-  this.getConnected = false
-  this.startConnecting = true
   
-}
-if (!event.checked) {
-  this.getConnected = true
-  this.startConnecting = false
-  
-
-  
-}
-}
-
-
-setConnectionState(){
-  this.getConnected = !this.getConnected
-  this.startConnecting = !this.startConnecting
-}
-
-navigateToCountryList(){
-this.router.navigate(['/country-list'])
-}
-
 }
