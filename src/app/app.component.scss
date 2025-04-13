@@ -22,5 +22,12 @@ button {
     height: 50px;
     border-radius: 20%;
     outline: goldenrod;
+
+}
+
+button:hover {
+    background-color: rgb(63, 63, 218);
+    border: 1px saddlebrown;
+
 }
 
