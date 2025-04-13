@@ -1,9 +1,11 @@
 .connect-toggle-button {
     display: flex;
     height: 100vh;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
 
 mat-slide-toggle{
     width: 300px;
