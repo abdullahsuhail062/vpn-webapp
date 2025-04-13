@@ -21,6 +21,12 @@ if (event.checked) {
   this.startConnecting = true
   
 }
+if (!event.checked) {
+  this.getConnected = true
+  this.startConnecting = false
+
+  
+}
 }
 
 
