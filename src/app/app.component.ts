@@ -45,7 +45,7 @@ setConnectionState(){
 }
 
 navigateToCountryList(){
-this.router.navigate(['/countryListComponent'])
+this.router.navigate(['/country-list'])
 }
 
 }
