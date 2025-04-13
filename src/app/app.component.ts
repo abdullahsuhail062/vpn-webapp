@@ -12,11 +12,11 @@ import { interval } from 'rxjs';
 })
 export class AppComponent {
   title = 'multipleLoginOptionsIntegration-webapp';
-    //@ViewChild('toggle') toggle!: MatSlideToggle;
+  isToggled:boolean = false
 toggleState(event: MatSlideToggleChange){
    
 if (event.checked) {
-  alert('button toggled to positive state')
+  this.isToggled = !this.isToggled
   
 }
 }
