@@ -2,11 +2,16 @@ import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatSlideToggle, MatSlideToggleChange, MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NgIf } from '@angular/common';
-import { interval } from 'rxjs';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input'; // if using <input> inside
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // r
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,MatSlideToggleModule,NgIf],
+  imports: [RouterOutlet,MatSlideToggleModule,NgIf,FormsModule,MatFormFieldModule,MatSelectModule,MatInputModule,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
