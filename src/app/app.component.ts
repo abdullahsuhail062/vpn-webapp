@@ -13,7 +13,7 @@ import { CountryListComponent } from './country-list/country-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [MatSlideToggleModule,NgIf,FormsModule,MatFormFieldModule,MatSelectModule,MatInputModule,CountryListComponent],
+  imports: [RouterOutlet,MatSlideToggleModule,NgIf,FormsModule,MatFormFieldModule,MatSelectModule,MatInputModule,CountryListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

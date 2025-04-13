@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-country-list',
-  imports: [RouterOutlet],
+  imports: [],
   templateUrl: './country-list.component.html',
   styleUrl: './country-list.component.scss'
 })
