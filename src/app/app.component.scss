@@ -29,8 +29,12 @@ button:hover {
     background-color: rgb(138, 138, 228);
     border: 2px solid rgb(121, 121, 3); /* Blue border */
 
-   
+}
 
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: 0 0 5px blue;
 }
 img {
     background-color: white;
