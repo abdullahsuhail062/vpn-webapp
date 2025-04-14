@@ -7,9 +7,21 @@ cursor: pointer;
 
 
 }
-.random{
+.list-container{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 
+
+}
+
+mat-list{
+    width: 100%;
+}
+
+.flags{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
 }
