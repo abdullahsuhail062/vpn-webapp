@@ -25,11 +25,17 @@ cursor: pointer;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
-    padding: 10px 20px 10px 20%;
+    padding: 7px 20px 7px 20%;
     border:solid 1px rgb(170, 167, 167);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background-color: #fff;
+    cursor: pointer;
+  }
+  mat-list:hover{
+    background-color: #fff;
+
+
   }
 
   .item-text{
