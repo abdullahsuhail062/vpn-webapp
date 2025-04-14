@@ -23,6 +23,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   @include mat.list-overrides((
     active-indicator-color: orange,
     list-item-container-color: red,
-    active-indicator-color :--mat-sys-secondary-container
+    active-indicator-color: --mat-sys-secondary-container
   ));
 }
