@@ -9,6 +9,10 @@
   align-items: center;
 
 }
+
+input{
+  right: auto;
+}
 .globe{
   border-radius: 50%;
   width: 30px;
@@ -46,7 +50,6 @@ cursor: pointer;
     justify-content: flex-start;
     flex-direction: row;
     padding: 7px 20px 7px 20%;
-    border-top: solid 2px rgb(170, 167, 167);
     border:solid 1px rgb(170, 167, 167);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
