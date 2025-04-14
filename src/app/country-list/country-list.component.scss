@@ -37,6 +37,11 @@ cursor: pointer;
 
 
   }
+  mat-list:focus,
+  mat-list:active{
+    outline: none;
+    box-shadow: chartreuse;
+  }
 
   .item-text{
     font-size: 16px;
