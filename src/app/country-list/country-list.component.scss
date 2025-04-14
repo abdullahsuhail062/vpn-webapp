@@ -14,16 +14,10 @@ cursor: pointer;
   
   mat-list {
     width: 100%;
+    font-size: 16px;
   }
   
-//   mat-list-item {
-//     width: 100%;
-//     padding: 20px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//   }
-  
+
 
 .flags{
     border-radius: 50%;
@@ -31,7 +25,3 @@ cursor: pointer;
     height: 30px;
     object-fit: cover;
 }
-
-.item-text {
-    font-size: 16px;
-  }
