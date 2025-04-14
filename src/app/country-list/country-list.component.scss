@@ -5,22 +5,24 @@ align-items: flex-start;
 padding: 10px;
 cursor: pointer;
 }
-.list-container{
+.list-container {
     display: flex;
     justify-content: center;
     width: 100vw;
     align-items: center;
-
-
-}
-
-mat-list{
+  }
+  
+  mat-list {
     width: 100%;
-}
-mat-list-item{
+  }
+  
+  mat-list-item {
     width: 100%;
     padding: 20px;
-}
+    display: flex;
+    align-items: center;
+  }
+  
 
 .flags{
     border-radius: 50%;
@@ -28,3 +30,7 @@ mat-list-item{
     height: 30px;
     object-fit: cover;
 }
+
+.item-text {
+    font-size: 16px;
+  }
