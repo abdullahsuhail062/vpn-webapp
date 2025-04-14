@@ -9,8 +9,10 @@ cursor: pointer;
   
   .list-container {
     display: flex;
-    width: 100vw;
+    height: 100vh;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   mat-list{
     width: 100%;
@@ -19,6 +21,8 @@ cursor: pointer;
   mat-list{
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: row;
     padding: 12px 24px;
   }
 
