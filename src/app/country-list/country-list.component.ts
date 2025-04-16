@@ -18,13 +18,13 @@ export class CountryListComponent implements OnInit {
   }
   
   update(event: boolean){
-    if (!event) {
-      alert('done')
-      
+    console.log(event);
+    
+
     }
    }
 
 
- }
+ 
 
 
