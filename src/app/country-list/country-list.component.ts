@@ -14,12 +14,13 @@ export class CountryListComponent implements OnInit {
 
   ngOnInit(): void {
     
-     this.update(false)   
+     this.update(true)   
     
   }
 
 
   update(event: boolean){
+    event = true
        
     }
   
