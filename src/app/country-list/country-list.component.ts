@@ -20,7 +20,7 @@ export class CountryListComponent implements OnInit {
 
 
   update(event: boolean){
-    event =true    
+       
     }
   
 
