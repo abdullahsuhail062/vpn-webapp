@@ -14,7 +14,7 @@ export class CountryListComponent implements OnInit {
 
   ngOnInit(): void {
     
-     this.update   
+     this.update(true)   
     
   }
 
