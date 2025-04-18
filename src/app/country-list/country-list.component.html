@@ -7,7 +7,7 @@
     (change)="update($event.checked)" [(ngModel)]="isChecked" ></mat-checkbox></div>
     <div class="list-container">
         <div #unitedState> <mat-list class="mat-list">
-        <img src="images/unitedstate.png" alt="united state" class="flags"><span class="item-text">United State</span> </mat-list></div>
+        <img src="images/unitedstate.png" alt="united state"   (click)="connectToUnitedStateServer()" class="flags"><span class="item-text">United State</span> </mat-list></div>
         <mat-list><img src="images/unitedkingdom.png" alt="" class="flags"><span class="item-text">United Kingdom</span></mat-list>
        <mat-list><img src="images/germany.jpeg" alt="" class="flags"><span class="item-text">Germany</span></mat-list>
        <mat-list> <img src="images/india.jpeg" alt="" class="flags"><span class="item-text">India</span></mat-list>

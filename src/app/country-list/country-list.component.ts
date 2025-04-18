@@ -33,16 +33,17 @@ export class CountryListComponent implements OnInit,AfterViewInit {
 
 
     ngAfterViewInit(): void {
+    this.connectToUnitedStateServer()
+    }
+    connectToUnitedStateServer(){
+
       const divContent = this.unitedState.nativeElement
 
       const text = this.unitedState.nativeElement.innerText;
-      console.log('Div content:', text);
       const img: HTMLImageElement = divContent.querySelector('img');
-    if (img && img.alt === 'united state') {
-      console.log('Image src:', img.src);
-      console.log(text);
+      console.log(img, text);
       
-    }
+    
     }
   
 
