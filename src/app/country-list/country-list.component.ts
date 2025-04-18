@@ -14,6 +14,7 @@ import { FormsModule, NgModel } from '@angular/forms';
 })
 export class CountryListComponent implements OnInit,AfterViewInit {
   @ViewChild('unitedState')unitedState!: ElementRef;
+   divContent = this.unitedState.nativeElement
 
   isChecked:boolean = false
   @Output() eventEmitter = new EventEmitter
@@ -33,9 +34,9 @@ export class CountryListComponent implements OnInit,AfterViewInit {
 
 
     ngAfterViewInit(): void {
-      const divContent = this.unitedState.nativeElement.innerText;
-      console.log('Div content:', divContent);
-      const img: HTMLImageElement = divContent.querySelector('img');
+      const text = this.unitedState.nativeElement.innerText;
+      console.log('Div content:', text);
+      const img: HTMLImageElement = this.divContent.querySelector('img')
     if (img) {
       console.log('Image src:', img.src);
       console.log('Image alt:', img.alt);
