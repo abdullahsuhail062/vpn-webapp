@@ -38,9 +38,10 @@ export class CountryListComponent implements OnInit,AfterViewInit {
       const text = this.unitedState.nativeElement.innerText;
       console.log('Div content:', text);
       const img: HTMLImageElement = divContent.querySelector('img');
-    if (img) {
+    if (img && img.alt === 'united state') {
       console.log('Image src:', img.src);
-      console.log('Image alt:', img.alt);
+      console.log(text);
+      
     }
     }
   
