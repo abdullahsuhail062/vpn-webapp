@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule, NgModel } from '@angular/forms';
+
 
 
 @Component({
@@ -12,7 +13,10 @@ import { FormsModule, NgModel } from '@angular/forms';
   styleUrl: './country-list.component.scss'
 })
 export class CountryListComponent implements OnInit {
+  @ViewChild('ununitedState')unitedState!: ElementRef;
+
   isChecked:boolean = false
+  @Output() eventEmitter = new EventEmitter
 
   ngOnInit(): void {
     this.isChecked = true
@@ -25,6 +29,12 @@ export class CountryListComponent implements OnInit {
   update(event: boolean){
     event = true
        
+    }
+
+
+    ngAfterViewInit(): void {
+      const divContent = this.unitedState.nativeElement.innerText;
+      console.log('Div content:', this.unitedState);
     }
   
 
