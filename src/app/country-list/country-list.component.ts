@@ -34,7 +34,7 @@ export class CountryListComponent implements OnInit {
 
     ngAfterViewInit(): void {
       const divContent = this.unitedState.nativeElement.innerText;
-      console.log('Div content:', this.unitedState);
+      console.log('Div content:', divContent);
     }
   
 
