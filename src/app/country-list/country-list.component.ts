@@ -14,7 +14,7 @@ import { FormsModule, NgModel } from '@angular/forms';
 })
 export class CountryListComponent implements OnInit,AfterViewInit {
   @ViewChild('unitedState')unitedState!: ElementRef;
-   divContent = this.unitedState.nativeElement
+   divContent: any = this.unitedState.nativeElement
 
   isChecked:boolean = false
   @Output() eventEmitter = new EventEmitter
