@@ -13,7 +13,7 @@ import { FormsModule, NgModel } from '@angular/forms';
   styleUrl: './country-list.component.scss'
 })
 export class CountryListComponent implements OnInit {
-  @ViewChild('ununitedState')unitedState!: ElementRef;
+  @ViewChild('unitedState')unitedState!: ElementRef;
 
   isChecked:boolean = false
   @Output() eventEmitter = new EventEmitter
