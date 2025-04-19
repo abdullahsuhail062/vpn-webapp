@@ -1,7 +1,6 @@
-<!-- <app-country-list (itemClicked)="getData($event)"></app-country-list> -->
 
 <div  class="connect-toggle-button">
     <mat-slide-toggle  class="mat-slide-toggle"  (change)="toggleState($event)" ><p *ngIf="getConnected">Toggle to get connected</p><p *ngIf="startConnecting"> Starting connect...</p><p *ngIf="connected">Connected</p></mat-slide-toggle>
   <button mat-button color="primary" (click)="navigateToCountryList()"><img src="selectedItem? selectedItem.image: images/earth.png" alt="" class="earth" width="30px" height="30px"> <span class="text"> {{ selectedItem ? selectedItem.text : 'Smart Connect' }} </span> <img src="images/navigate.jpg" alt="" class="globe" width="30px" height="30px"></button></div>
   
-  
+  <app-country-list (itemClicked)="getData($event)"></app-country-list>
