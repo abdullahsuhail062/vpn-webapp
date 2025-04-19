@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -11,15 +11,29 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
-  imports: [MatSlideToggleModule,NgIf,FormsModule,MatFormFieldModule,MatSelectModule,MatInputModule,CountryListComponent],
+  imports: [MatSlideToggleModule, NgIf, FormsModule, MatFormFieldModule, MatSelectModule, MatInputModule, CountryListComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent {
+export class LandingPageComponent implements OnInit {
   getConnected:boolean = true
   startConnecting: boolean =false
   connected: boolean = false
+  selectedItem: { image: string, text: string } | null = null;
+
   constructor(private router: Router){}
+  ngOnInit(): void {
+    
+
+  }
+
+  getData(item:{image: string, text: string}){
+    this.selectedItem = item;
+
+
+  }
+
+
   toggleState(event: MatSlideToggleChange){
    
 if (event.checked) {

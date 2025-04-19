@@ -13,10 +13,10 @@ import { FormsModule, NgModel } from '@angular/forms';
   styleUrl: './country-list.component.scss'
 })
 export class CountryListComponent implements OnInit {
-  @ViewChild('itemList')itemList!: ElementRef;
 
   isChecked:boolean = false
   @Output() itemClicked = new EventEmitter<{ image: string, text: string }>();
+  
   list = [
     { image: 'images/unitedstate.png', text: 'United State' },
     { image: 'images/unitedkingdom.png', text: 'United Kingdom' },
@@ -40,21 +40,31 @@ export class CountryListComponent implements OnInit {
     }
 
 
-    onItemClick(event: MouseEvent): void {
-      const target = event.target as HTMLElement;
-    
-      // Find the closest mat-list parent of the clicked item
-      const matListItem = target.closest('mat-list');
-      if (!matListItem) return;
-    
-      const img = matListItem.querySelector('img') as HTMLImageElement;
-      const text = matListItem.querySelector('span')?.textContent?.trim();
-    
-      console.log('Clicked item:');
-      console.log('Image src:', img?.src);
-      console.log('Alt text:', img?.alt);
-      console.log('Text:', text);
+    onUsaItemClick(): void {
+      this.itemClicked.emit({image:'images/unitedstate.png', text: 'United State'})
+     
     }
+
+    onUkItemClick(): void {
+      this.itemClicked.emit({image:'images/unitedkingdom.png', text: 'United Kingdom'})
+
+     
+    }
+    onGmItemClick(): void {
+      this.itemClicked.emit({image:'images/germany.jpeg', text: 'Germany'})
+
+     
+    }
+    onInItemClick(): void {
+      this.itemClicked.emit({image:'images/india.jpeg', text: 'India'})
+
+     
+    }
+    onAusItemClick(): void {
+      this.itemClicked.emit({image:'images/autralia.jpeg', text: 'Australia'})
+
+    }
+   
 
    }
 
