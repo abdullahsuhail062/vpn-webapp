@@ -15,17 +15,14 @@ import { Router } from '@angular/router';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent implements OnInit {
+export class LandingPageComponent  {
   getConnected:boolean = true
   startConnecting: boolean =false
   connected: boolean = false
   selectedItem: { image: string, text: string } | null = null;
 
   constructor(private router: Router){}
-  ngOnInit(): void {
-    
-
-  }
+  
 
   getData(item:{image: string, text: string}){
     this.selectedItem = item;
