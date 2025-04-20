@@ -25,9 +25,9 @@ export class LandingPageComponent  {
   constructor(private router: Router){}
   
 
-  getData(item:{image: string, text: string}){
-    this.selectedItem = item;
-    console.log(item);
+  getData(data:{image: string, text: string}){
+    this.selectedItem = data;
+    console.log(data);
     
     
 

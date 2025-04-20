@@ -1,8 +1,8 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import {  Component, EventEmitter, OnInit, Output,  } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
 
@@ -29,7 +29,6 @@ export class CountryListComponent implements OnInit {
 
   ngOnInit(): void {
     this.isChecked = true
-    
      this.update(this.isChecked)   
     
   }
