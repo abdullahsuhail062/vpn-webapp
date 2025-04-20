@@ -56,6 +56,7 @@ cursor: pointer;
     border-radius: 8px;
     background-color: #fff;
     cursor: pointer;
+    user-select: none;
   }
   mat-list:hover{
     background-color: rgb(189, 187, 187);
