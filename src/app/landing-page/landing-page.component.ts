@@ -39,12 +39,13 @@ export class LandingPageComponent implements OnInit {
 if (event.checked) {
   this.getConnected = false
   this.startConnecting = true
+  this.router.navigate(['/connection-detail'])
+
   
 }
 if (!event.checked) {
   this.getConnected = true
   this.startConnecting = false
-  this.router.navigate(['/connection-detail'])
 }
 }
 
