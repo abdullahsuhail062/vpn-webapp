@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 })
 export class LandingPageComponent  {
   getConnected:boolean = true
-  showList:boolean = false
+  showList:boolean = true
   startConnecting: boolean =false
   connected: boolean = false
   selectedItem: { image: string, text: string } | null = null;
@@ -28,7 +28,7 @@ export class LandingPageComponent  {
   getData(item:{image: string, text: string}){
     this.selectedItem = item;
     console.log(this.selectedItem, 'log data received');
-    this.showList = true
+    this.showList = false
     
 
 
