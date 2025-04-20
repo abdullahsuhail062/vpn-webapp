@@ -4,5 +4,6 @@
   <button mat-button color="primary" (click)="navigateToCountryList()"><img [src]="selectedItem? selectedItem.image: 'images/earth.png'" alt="" class="earth" width="30px" height="30px"> <span class="text"> {{ selectedItem ? selectedItem.text : 'Smart Connect' }} </span> <img src="images/navigate.jpg" alt="" class="globe" width="30px" height="30px"></button></div>
 
   <app-country-list *ngIf="showList" (itemClicked)="getData($event)"></app-country-list>
+  <p><app-country-list *ngIf="showList" (itemClicked)="getData($event)"></app-country-list></p>
 
   
