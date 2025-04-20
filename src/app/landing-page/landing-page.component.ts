@@ -44,6 +44,7 @@ if (event.checked) {
 if (!event.checked) {
   this.getConnected = true
   this.startConnecting = false
+  this.router.navigate(['/connection-detail'])
 }
 }
 
