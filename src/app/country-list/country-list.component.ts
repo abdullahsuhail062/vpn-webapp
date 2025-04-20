@@ -68,7 +68,7 @@ export class CountryListComponent implements OnInit {
      
     }
     onAusItemClick(): void {
-      const data ={image:'images/autralia.jpeg', text: 'Australia'}
+      const data ={image:'images/australia.jpeg', text: 'Australia'}
       this.sharedService.setSelectedData(data)
       this.router.navigate(['/'])
 
