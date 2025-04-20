@@ -28,7 +28,7 @@ export class LandingPageComponent  {
   getData(data:{image: string, text: string}){
     console.log('📥 Received in parent:', data); // should log on selection
     this.selectedItem = data;
-    this.showList = true;   
+    
     
   }
 
@@ -54,5 +54,4 @@ setConnectionState(){
 
 navigateToCountryList(){
 this.router.navigate(['/country-list'])
-this.showList = true
 }}
