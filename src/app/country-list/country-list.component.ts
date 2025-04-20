@@ -43,9 +43,7 @@ export class CountryListComponent implements OnInit {
 
     onUsaItemClick(): void {
      const data = {image:'images/unitedstate.png', text: 'United State'};
-      this.itemClicked.emit(data)
-      console.log('checking...',data);
-      
+      this.itemClicked.emit(data)      
       this.router.navigate(['/'])
      
     }
