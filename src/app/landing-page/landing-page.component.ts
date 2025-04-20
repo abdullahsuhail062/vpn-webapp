@@ -28,6 +28,7 @@ export class LandingPageComponent  {
   getData(item:{image: string, text: string}){
     this.selectedItem = item;
     console.log(this.selectedItem, 'log data received');
+    this.showList = true
     
 
 
