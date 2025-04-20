@@ -27,6 +27,8 @@ export class LandingPageComponent  {
 
   getData(data:{image: string, text: string}){
     this.selectedItem = data;
+    console.log(this.selectedItem,"data received");
+    
   }
 
 
