@@ -5,12 +5,12 @@
 
 <div class="contents"><img src="images/earth.png" alt="" class="globe" width="30px" height="30px"><span class="text">Connect Smart</span>   <mat-checkbox class="example-margin"
     (change)="update($event.checked)" [(ngModel)]="isChecked" ></mat-checkbox></div>
-    <div class="list-container" > <mat-list class="mat-list">
-        (click)="onUsaItemClick()"  <img  matListAvatar src="images/unitedstate.png" alt="united state" class="flags"><span class="item-text" matLine>United State</span> </mat-list>
-        <mat-list> (click)="onUkItemClick()"<img matListAvatar src="images/unitedkingdom.png" alt="" class="flags"><span class="item-text" matLine>United Kingdom</span></mat-list>
-       <mat-list> (click)="onGmItemClick()"<img matListAvatar src="images/germany.jpeg" alt="" class="flags"><span class="item-text"matLine>Germany</span></mat-list>
-       <mat-list>(click)="onInItemClick()" <img matListAvatar src="images/india.jpeg" alt="" class="flags"><span class="item-text"matLine>India</span></mat-list>
-       <mat-list>(click)="onAusItemClick()" <img matListAvatar src="images/australia.jpeg" alt="" class="flags"><span class="item-text"matLine>Australia</span></mat-list>
+    <div class="list-container" > <mat-list class="mat-list" (click)="onUsaItemClick()">
+          <img  matListAvatar src="images/unitedstate.png" alt="united state" class="flags"><span class="item-text" matLine>United State</span> </mat-list>
+        <mat-list  (click)="onUkItemClick()"><img matListAvatar src="images/unitedkingdom.png" alt="" class="flags"><span class="item-text" matLine>United Kingdom</span></mat-list>
+       <mat-list (click)="onGmItemClick()"> <img matListAvatar src="images/germany.jpeg" alt="" class="flags"><span class="item-text"matLine>Germany</span></mat-list>
+       <mat-list (click)="onInItemClick()"> <img matListAvatar src="images/india.jpeg" alt="" class="flags"><span class="item-text"matLine>India</span></mat-list>
+       <mat-list (click)="onAusItemClick()"> <img matListAvatar src="images/australia.jpeg" alt="" class="flags"><span class="item-text"matLine>Australia</span></mat-list>
     </div>
       
        
