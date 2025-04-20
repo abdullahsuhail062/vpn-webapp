@@ -3,6 +3,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule, NgModel } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 
@@ -16,7 +17,7 @@ export class CountryListComponent implements OnInit {
 
   isChecked:boolean = false
   @Output() itemClicked = new EventEmitter<{ image: string, text: string }>();
-  
+  constructor(private router: Router){}
   list = [
     { image: 'images/unitedstate.png', text: 'United State' },
     { image: 'images/unitedkingdom.png', text: 'United Kingdom' },
@@ -42,6 +43,7 @@ export class CountryListComponent implements OnInit {
 
     onUsaItemClick(): void {
       this.itemClicked.emit({image:'images/unitedstate.png', text: 'United State'})
+      this.router.navigate(['/'])
      
     }
 
