@@ -17,6 +17,7 @@ import { Router } from '@angular/router';
 })
 export class LandingPageComponent  {
   getConnected:boolean = true
+  showList:boolean = false
   startConnecting: boolean =false
   connected: boolean = false
   selectedItem: { image: string, text: string } | null = null;
