@@ -49,21 +49,29 @@ export class CountryListComponent implements OnInit {
 
     onUkItemClick(): void {
       this.itemClicked.emit({image:'images/unitedkingdom.png', text: 'United Kingdom'})
+      this.router.navigate(['/'])
+
 
      
     }
     onGmItemClick(): void {
       this.itemClicked.emit({image:'images/germany.jpeg', text: 'Germany'})
+      this.router.navigate(['/'])
+
 
      
     }
     onInItemClick(): void {
       this.itemClicked.emit({image:'images/india.jpeg', text: 'India'})
+      this.router.navigate(['/'])
+
 
      
     }
     onAusItemClick(): void {
       this.itemClicked.emit({image:'images/autralia.jpeg', text: 'Australia'})
+      this.router.navigate(['/'])
+
 
     }
    
