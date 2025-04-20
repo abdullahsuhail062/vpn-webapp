@@ -1,10 +1,10 @@
 import { NgIf } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { MatSlideToggle, MatSlideToggleChange, MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatSlideToggleChange, MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CountryListComponent } from '../country-list/country-list.component';
 import { Router } from '@angular/router';
 
@@ -27,11 +27,6 @@ export class LandingPageComponent  {
 
   getData(data:{image: string, text: string}){
     this.selectedItem = data;
-    console.log(data);
-    
-    
-
-
   }
 
 
@@ -45,9 +40,6 @@ if (event.checked) {
 if (!event.checked) {
   this.getConnected = true
   this.startConnecting = false
-  
-
-  
 }
 }
 
@@ -59,7 +51,5 @@ setConnectionState(){
 
 navigateToCountryList(){
 this.router.navigate(['/country-list'])
-}
-
-
-}
+this.showList = true
+}}
