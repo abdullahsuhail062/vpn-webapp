@@ -26,6 +26,7 @@ export class LandingPageComponent  {
   
 
   getData(item:{image: string, text: string}){
+    debugger
     this.selectedItem = item;
     console.log(this.selectedItem, 'log data');
     
