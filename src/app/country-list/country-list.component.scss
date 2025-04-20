@@ -49,6 +49,7 @@ cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
     flex-direction: row;
     padding: 7px 20px 7px 20%;
     border:solid 1px rgb(170, 167, 167);
@@ -63,10 +64,8 @@ cursor: pointer;
 
 
   }
-  mat-list:focus,
   mat-list:active{
-    outline: none;
-    box-shadow: chartreuse;
+    background-color: #e0e0e0;
   }
 
   .item-text{
