@@ -4,6 +4,7 @@ import { MatListModule } from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SharedService } from '../shared.service';
 
 
 
@@ -16,15 +17,8 @@ import { Router } from '@angular/router';
 export class CountryListComponent implements OnInit {
 
   isChecked:boolean = false
-  @Output() itemClicked = new EventEmitter<{ image: string, text: string }>();
-  constructor(private router: Router){}
-  list = [
-    { image: 'images/unitedstate.png', text: 'United State' },
-    { image: 'images/unitedkingdom.png', text: 'United Kingdom' },
-    { image: 'images/germany.jpeg', text: 'Germany' },
-    {image:   'images/india.jpeg', text: 'India'},
-    {image: 'images/australia.jpeg', text: 'Australia'}
-  ];
+  constructor(private router: Router,private sharedService: SharedService){}
+  
 
 
   ngOnInit(): void {
@@ -42,37 +36,40 @@ export class CountryListComponent implements OnInit {
 
     onUsaItemClick(): void {
      const data = {image:'images/unitedstate.png', text: 'United State'};
-      this.itemClicked.emit(data)
-     this.router.navigate(['/'])
-
+     this.sharedService.setSelectedData(data);
+     this.router.navigate(['/']);
         
     
      
     }
 
     onUkItemClick(): void {
-      this.itemClicked.emit({image:'images/unitedkingdom.png', text: 'United Kingdom'})
-      this.router.navigate(['/'])
+      const data ={image:'images/unitedkingdom.png', text: 'United Kingdom'}
+      this.sharedService.setSelectedData(data);
+      this.router.navigate(['/']);
 
 
      
     }
     onGmItemClick(): void {
-      this.itemClicked.emit({image:'images/germany.jpeg', text: 'Germany'})
+      const data ={image:'images/germany.jpeg', text: 'Germany'}
+      this.sharedService.setSelectedData(data)
       this.router.navigate(['/'])
 
 
      
     }
     onInItemClick(): void {
-      this.itemClicked.emit({image:'images/india.jpeg', text: 'India'})
+    const data ={image:'images/india.jpeg', text: 'India'}
+    this.sharedService.setSelectedData(data)
       this.router.navigate(['/'])
 
 
      
     }
     onAusItemClick(): void {
-      this.itemClicked.emit({image:'images/autralia.jpeg', text: 'Australia'})
+      const data ={image:'images/autralia.jpeg', text: 'Australia'}
+      this.sharedService.setSelectedData(data)
       this.router.navigate(['/'])
 
 

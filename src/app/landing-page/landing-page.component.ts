@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -7,6 +7,7 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatSlideToggleChange, MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CountryListComponent } from '../country-list/country-list.component';
 import { Router } from '@angular/router';
+import { SharedService } from '../shared.service';
 
 
 @Component({
@@ -15,20 +16,21 @@ import { Router } from '@angular/router';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
-export class LandingPageComponent  {
+export class LandingPageComponent implements OnInit {
   getConnected:boolean = true
   showList:boolean = false
   startConnecting: boolean =false
   connected: boolean = false
-  selectedItem: { image: string, text: string } | null = null;
+  selectedItem: {image: string, text: string} | null = null
 
-  constructor(private router: Router){}
+  constructor(private router: Router, private sharedService: SharedService){}
   
-
-  getData(data:{image: string, text: string}){
-    this.selectedItem = data;
-    
-    
+  ngOnInit() {
+    const data = this.sharedService.getSelectedData();
+    if (data) {
+      this.selectedItem = data;
+      this.sharedService.clearSelectedData(); // Optional: clear after use
+    }
   }
 
 
